@@ -46,7 +46,8 @@ static void url_session_manager_create_task_safely(dispatch_block_t _Nonnull blo
             // Issue about:https://github.com/AFNetworking/AFNetworking/issues/2093
             dispatch_sync(url_session_manager_creation_queue(), block);
         } else {
-            block();
+            // block();
+            NSLog(@"block");
         }
     }
 }
